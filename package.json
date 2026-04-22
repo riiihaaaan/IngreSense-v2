@@ -1,0 +1,14 @@
+{
+  "name": "ingresense-v2-root",
+  "version": "2.0.0",
+  "description": "Root package for deployment (Elastic Beanstalk, Render, etc.)",
+  "scripts": {
+    "preinstall": "npm install --prefix server && npm install --prefix client",
+    "build": "npm run build --prefix client",
+    "postinstall": "npm run build",
+    "start": "node server/server.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
